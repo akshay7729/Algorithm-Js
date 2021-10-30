@@ -28,32 +28,21 @@ const searchInsert = (arr, target) => {
   if (arr.indexOf(target) !== -1) {
     return arr.indexOf(target);
   } else {
-    // as the array is sorted in asc order
-    // we can check if number is greater than the last element in the array
-    // if yes we can just get the length of an array, as array starts with 0
     if (target > arr[arr.length - 1]) {
       return arr.length;
-    }
-
-    // if the target is less than the first number
-    // we can insert before the first array
-    else if (target < arr[0]) {
+    } else if (target < arr[0]) {
       return 0;
     } else {
       let getClosestVal = closestNum(arr, target);
-      console.log("closest val", getClosestVal);
       if (getClosestVal > target) {
-        console.log("4", arr.indexOf(getClosestVal));
         return arr.indexOf(getClosestVal);
       } else {
-        console.log("5", arr.indexOf(getClosestVal) + 1);
         return arr.indexOf(getClosestVal) + 1;
       }
     }
   }
 };
 
-// Find the closest number in the array
 const closestNum = (arr, num) => {
   return arr.reduce((a, b) => {
     return Math.abs(b - num) < Math.abs(a - num) ? b : a;
@@ -61,3 +50,20 @@ const closestNum = (arr, num) => {
 };
 
 searchInsert([1, 2, 3, 5, 8, 13, 21], 9);
+
+// line 31
+// as the array is sorted in asc order
+// we can check if number is greater than the last element in the array
+// if yes we can just get the length of an array, as array starts with 0
+
+// line 34
+// if the target is less than the first number
+// we can insert before the first array
+
+// line 38
+// if the closest number is greater than target
+// target will take the getClosestVal position
+// and getClosestVal will move to the next position
+
+// line 46
+// Find the closest number in the array
