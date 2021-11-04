@@ -20,4 +20,4 @@ const arrayComparision = (a, b) => {
   return [arr1Score, arr2Score];
 };
 
-console.log(arrayComparision([4, 4, 4, 4], [4, 6, 6, 4]));
+console.log(arrayComparision([1, 2, 3], [3, 2, 1]));
