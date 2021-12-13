@@ -1,0 +1,6 @@
+O(1) -> takes same amount of time
+O(log(n)) -> if doubling the no of elements, doesn't double the amount of work
+O(n) -> linear runtime
+O(n*log(n)) -> if doubling the no of elements, doesn;t double the amount of work
+O(n*2) -> Every element has to be compared to every other element
+O(2*n) -> adding a single element to the collection, the processing power required double
