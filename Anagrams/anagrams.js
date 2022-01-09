@@ -1,4 +1,8 @@
 const anagrams = (a, b) => {
+  if (a.length !== b.length) {
+    return false;
+  }
+
   const AClean = a.replace(/[^\w]/g, "");
   const BCleam = b.replace(/[^\w]/g, "");
   return (
